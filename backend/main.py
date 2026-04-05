@@ -39,7 +39,7 @@ async def startup():
         await conn.run_sync(models.Base.metadata.create_all)
 
 # OpenRouter API Key should be in .env
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY") or "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"
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 class CareerRequest(BaseModel):
     background: str
